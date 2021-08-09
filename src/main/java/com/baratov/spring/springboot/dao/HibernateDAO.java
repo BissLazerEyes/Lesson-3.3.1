@@ -3,9 +3,6 @@ package com.baratov.spring.springboot.dao;
 import com.baratov.spring.springboot.model.Role;
 import com.baratov.spring.springboot.model.User;
 import com.baratov.spring.springboot.myExcetion.SaveObjectException;
-import org.hibernate.Hibernate;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -17,7 +14,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Repository
-@Scope(proxyMode = ScopedProxyMode.TARGET_CLASS )
 public class HibernateDAO implements DAO {
 
     @PersistenceContext()

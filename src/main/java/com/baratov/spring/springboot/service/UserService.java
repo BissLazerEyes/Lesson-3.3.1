@@ -6,20 +6,16 @@ import com.baratov.spring.springboot.model.User;
 import com.baratov.spring.springboot.myExcetion.SaveObjectException;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 import java.util.Set;
 
 @Service
-@Scope(proxyMode = ScopedProxyMode.TARGET_CLASS )
 public class UserService implements UserDetailsService, IUserService {
 
     private DAO dao;
